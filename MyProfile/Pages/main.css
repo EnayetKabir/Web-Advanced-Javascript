@@ -1,0 +1,24 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	background-color: black;
+}
+
+h1 {
+	color: #0C82F7;
+	font-size: 3.0rem;
+	font-weight: bold;
+}
+
+div {
+	margin: 50px 50px 20px 0px;
+	padding: 25px;
+}
+
+p {
+	color: purple;
+}
+
+.music {
+
+	color: white;
+}
