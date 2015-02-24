@@ -1,24 +1,69 @@
-body {
-	font-family: Helvetica, Arial, sans-serif;
-	background-color: black;
-}
 
-h1 {
-	color: #0C82F7;
-	font-size: 3.0rem;
-	font-weight: bold;
+* { margin: 0; padding: 0; } 
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 div {
-	margin: 50px 50px 20px 0px;
-	padding: 25px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
 }
 
-p {
-	color: purple;
+h1 {
+	color: White;
+	font-size: 3.0rem;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #000;
+	display: inline-block;
+	position: relative;
+	top: 50%;
+	width: 100%;
+	text-align: center;
 }
 
-.music {
-
-	color: white;
+.more {
+	color: White;
+	font-size: 1.0rem;
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	top: 70%;
+	width: 100%;
+	text-align: center;
 }
+
+.canvas {
+	width: 100%;
+	height: 100%;
+	background: url('tardigrade1.gif');
+	background-size: cover;
+	background-position: relative;
+	padding: 0px;		
+}
+
+.canvas2 {
+	width: 100%;
+	height: 100%;
+	background: url('tardigrade2.gif');
+	background-size: cover;
+	background-position: relative;
+	padding: 0px;		
+}
+
+.canvas3 {
+	width: 100%;
+	height: 100%;
+	background: url('tardigrade3.gif');
+	background-size: cover;
+	background-position: relative;
+	padding: 0px;		
+}
+
+
+
+
+
+
