@@ -1,0 +1,162 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.header {
+	width: 100%;
+	height: 70px;
+	padding: 10px 0;
+/*	background-color: pink;*/
+}
+
+.name {
+	float: left;
+	margin-left: 2.7%;
+	display: inline-block;
+	position: relative;
+	top: 40%;
+}
+
+.name h1{	
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 3em;
+}
+
+.name a {
+	text-decoration: none;
+	font-family: Helvetica;
+	color: black;
+}
+
+.nav {
+	float: right;
+	padding-right: 2.5%;
+	display: inline-block;
+	position: relative;
+	top: 57%;
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.nav li {
+	display: inline;
+	padding-left: 30px;
+	padding-right: 0;
+}
+
+.nav a {
+	text-decoration: none;
+	font-size: 1.3em;
+	color: #BAC1CF;
+	transition: .1s color;
+}
+
+.nav a:hover{
+    color: #3D4A4A;
+    transition-delay:.1s;
+}
+
+.nav a:active {
+	position:relative;
+	top: 1px;
+}
+
+.content {
+	width: 100%;
+	margin: 5% auto 0;
+}
+
+.project {
+	width: 28%;
+	margin: 0% 2.5%;
+	display: inline-block;
+}
+
+.project img {
+	width: 100%;
+	box-shadow: 2.5px 2.5px 2.5px 1px #888888;
+	transition: .1s opacity;
+}
+
+.project img:hover {
+	opacity: .9;
+    transition-delay:.1s;
+}
+
+.project p {
+	text-align: center;
+	font-size: 1.0em;
+	color: #BAC1CF;
+}
+
+.about {
+	margin-top: 160px;
+	padding: 20px 2.7%;
+}
+
+.about p{
+	font-size: 1.0em;
+}
+
+.music {
+	margin-top: 90px;
+	padding: 20px 2.7%;
+}
+
+.video {
+	margin-top: 80px;
+}
+
+.video p{
+	text-align: left;
+	font-size: 1.0em;
+	color: #BAC1CF;
+	margin: 20px 17%;
+}
+
+.contact {
+	margin-top: 120px;
+	padding: 20px 2.7%;
+}
+
+.contact p{
+	font-size: 1.0em;
+}
+
+
+/*Responsive Design*/
+
+@media (max-width: 1024px) {
+	.project {
+	width: 80%;
+	margin: 10%;
+	}
+}
+
+@media (max-width: 700px) {
+	.project {
+	width: 80%;
+	margin-left: 2.7%;
+	margin-right: 7.3%;
+	}
+
+	.nav {
+	float: left;
+	padding-left: 3.3%;
+	display: inline-block;
+	position: relative;
+	top: 57%;
+	}
+
+	.nav li {
+	display: inline;
+	padding-right: 82px;
+	padding-left: 0;
+	}
+
+}	
