@@ -18,3 +18,13 @@
 			right: 15px;
 			z-index: 3;
 			}
+
+			.logo img {
+				opacity: .8;
+				/*transition: .1s opacity;*/
+			}
+
+			.logo img:hover {
+				opacity: 1.0;
+   				/*transition-delay:.1s;*/
+			}
