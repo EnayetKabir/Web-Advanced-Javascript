@@ -44,18 +44,22 @@
 		<script src="js/Projector.js"></script>
 		<script src="js/CanvasRenderer.js"></script>
 
+		<script src="js/stats.min.js"></script>
+
 		<script>
 
 			var camera, scene, renderer,
 			particle1, particle2, particle2,
 			light1, light2, light3,
-			loader, mesh;
-//these 4 lines
+			loader, mesh;	
+
 			var mouseX = 0;
 			var mouseY = 0;
-
 			var windowHalfX = window.innerWidth / 2;
 			var windowHalfY = window.innerHeight / 2;
+			
+			//stats
+			var container, stats;
 
 			init();
 			animate();
@@ -69,6 +73,14 @@
 
 				scene = new THREE.Scene();
 
+				//Lights
+				var ambient = new THREE.AmbientLight(0x666666);
+				scene.add(ambient);
+ 
+				var directionalLight = new THREE.DirectionalLight(0xffeedd);
+				directionalLight.position.set(0, 70, 100).normalize();
+				scene.add(directionalLight);
+
 				loader = new THREE.JSONLoader();
 				loader.load( 'EnayetLuckyCat.js', function ( geometry ) {
 
@@ -78,13 +90,17 @@
 					mesh.position.set(0, -80, 0);
 					mesh.scale.set(40, 40, 40);
 					scene.add( mesh );
-
 				} );
 
 				renderer = new THREE.CanvasRenderer();
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				container.appendChild( renderer.domElement );
+				//this
+				stats = new Stats();
+				stats.domElement.style.position = 'absolute';
+				stats.domElement.style.top = '0px';
+				container.appendChild( stats.domElement );
 
 				//this line
 				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
@@ -93,7 +109,6 @@
 
 
 			}
-
 			// function onWindowResize() {
 
 			// 	camera.aspect = window.innerWidth / window.innerHeight;
@@ -129,17 +144,17 @@
 				requestAnimationFrame( animate );
 
 				render();
-
+				stats.update();
 			}
 
 			function render() {
 
-				var time = Date.now() * 0.0005;
+				//var time = Date.now() * 0.0005;
 
 				//if ( mesh ) mesh.rotation.y -= 0.01;
 
-				camera.position.x += ( mouseX - camera.position.x ) * 0.05;
-				camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
+				camera.position.x += ( mouseX - camera.position.x ) * 0.09;
+				camera.position.y += ( - mouseY - camera.position.y ) * 0.09;
 				camera.lookAt( scene.position );
 
 				renderer.render( scene, camera );
